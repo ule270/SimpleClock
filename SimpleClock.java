@@ -64,6 +64,7 @@ public class SimpleClock extends JFrame {
 
             localGMT.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent A) {
+                    isGMT = !isGMT;
                     if (isGMT) {
                         localGMT.setText("Local Time");
                     } else {
@@ -76,6 +77,7 @@ public class SimpleClock extends JFrame {
             this.add(dayLabel);
             this.add(dateLabel);
             this.add(milTime);
+            this.add(localGMT);
             this.setVisible(true); // to be able to be visible;
     
             setTimer();
