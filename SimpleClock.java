@@ -99,7 +99,7 @@ public class SimpleClock extends JFrame {
                 if (isGMT) {
                     timeFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
                 } else {
-                    timeFormat.setTimeZone(TimeZone.getDefault());
+                    timeFormat.setTimeZone(TimeZone.getDefault()); // get default for this host
                 }
                 time = timeFormat.format(Calendar.getInstance().getTime());
                 timeLabel.setText(time);
